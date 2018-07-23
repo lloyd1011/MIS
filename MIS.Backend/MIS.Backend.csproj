@@ -188,14 +188,39 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\ActivitiesController.cs" />
+    <Compile Include="Controllers\AdminsController.cs" />
+    <Compile Include="Controllers\AdviserNotificationsController.cs" />
+    <Compile Include="Controllers\AdviserOrganizationsController.cs" />
+    <Compile Include="Controllers\AdvisersController.cs" />
+    <Compile Include="Controllers\AttendancesController.cs" />
+    <Compile Include="Controllers\CollegeCoordinatorsController.cs" />
+    <Compile Include="Controllers\CollegesController.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\DeansController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LiabilitiesController.cs" />
+    <Compile Include="Controllers\MessagesController.cs" />
+    <Compile Include="Controllers\NotificationReadAdvisersController.cs" />
+    <Compile Include="Controllers\NotificationReadsController.cs" />
+    <Compile Include="Controllers\NotificationsController.cs" />
+    <Compile Include="Controllers\OfficersController.cs" />
+    <Compile Include="Controllers\OrganizationsController.cs" />
+    <Compile Include="Controllers\OrganizationTypesController.cs" />
+    <Compile Include="Controllers\RecognizedOrganizationsController.cs" />
+    <Compile Include="Controllers\SchoolYearsController.cs" />
+    <Compile Include="Controllers\SemestersController.cs" />
+    <Compile Include="Controllers\StudentLiabilitiesController.cs" />
+    <Compile Include="Controllers\StudentPositionsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\YearsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807230710199_MIS.cs" />
-    <Compile Include="Migrations\201807230710199_MIS.Designer.cs">
-      <DependentUpon>201807230710199_MIS.cs</DependentUpon>
+    <Compile Include="Migrations\201807230755074_Management.cs" />
+    <Compile Include="Migrations\201807230755074_Management.Designer.cs">
+      <DependentUpon>201807230755074_Management.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Activity.cs" />
@@ -314,8 +339,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807230710199_MIS.resx">
-      <DependentUpon>201807230710199_MIS.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807230755074_Management.resx">
+      <DependentUpon>201807230755074_Management.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

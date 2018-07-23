@@ -7,13 +7,13 @@ namespace MIS.Backend.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class MIS : IMigrationMetadata
+    public sealed partial class Management : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(MIS));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Management));
         
         string IMigrationMetadata.Id
         {
-            get { return "201807230710199_MIS"; }
+            get { return "201807230755074_Management"; }
         }
         
         string IMigrationMetadata.Source

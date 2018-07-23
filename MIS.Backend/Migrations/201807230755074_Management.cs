@@ -3,7 +3,7 @@ namespace MIS.Backend.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class MIS : DbMigration
+    public partial class Management : DbMigration
     {
         public override void Up()
         {
@@ -481,7 +481,5 @@ namespace MIS.Backend.Migrations
             DropTable("dbo.Organizations");
             DropTable("dbo.Activities");
         }
-
-
     }
 }
