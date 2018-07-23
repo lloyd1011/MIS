@@ -30,9 +30,13 @@ namespace MIS.Backend
                 .ApplyTo(httpConfig);
 
             httpConfig.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-
+#if DEBUG
+            Database.SetInitializer(new MobileServiceInitializer());
+#else
             var migrator = new DbMigrator(new Migrations.Configuration());
             migrator.Update();
+#endif
+
             MobileAppSettingsDictionary settings = httpConfig.GetMobileAppSettingsProvider().GetMobileAppSettings();
 
             if (string.IsNullOrEmpty(settings.HostName))

@@ -13,7 +13,7 @@ namespace MIS.Mobile.ViewModels
     public class ViewModelBase : BindableBase, INavigationAware, IDestructible
     {
         private MobileServiceClient client;
-        private const string backend_url="your_backend_url";
+        private const string backend_url="http://192.168.254.9/MIS.Backend";
         public MobileServiceClient Client
         {
             get

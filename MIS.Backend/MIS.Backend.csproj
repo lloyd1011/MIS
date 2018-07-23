@@ -17,7 +17,7 @@
     <AssemblyName>MIS.Backend</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -161,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.MobileApp.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Migrations\201807231336014_Initial.cs" />
     <Compile Include="Migrations\201807231336014_Initial.Designer.cs">
       <DependentUpon>201807231336014_Initial.cs</DependentUpon>
@@ -183,8 +184,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="DataObjects\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -213,7 +212,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:60513/</IISUrl>
+          <IISUrl>http://localhost/MIS.Backend</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

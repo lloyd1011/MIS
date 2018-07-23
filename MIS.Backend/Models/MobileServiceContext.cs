@@ -50,4 +50,9 @@ namespace MIS.Backend.Models
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
         }
     }
+
+    public class MobileServiceInitializer : CreateDatabaseIfNotExists<MobileServiceContext>
+    {
+        
+    }
 }

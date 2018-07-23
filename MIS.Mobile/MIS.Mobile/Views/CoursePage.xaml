@@ -3,7 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="MIS.Mobile.Views.CoursePage">
+             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             x:Class="MIS.Mobile.Views.CoursePage"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddCommand}" />
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <ActivityIndicator IsVisible="{Binding IsBusy}" />
         <ListView ItemsSource="{Binding Courses}"
@@ -11,6 +16,11 @@
                   RefreshCommand="{Binding RefreshCommand}"
                   HasUnevenRows="True"
                   IsRefreshing="{Binding IsBusy}" >
+            <ListView.Behaviors>
+                <b:EventToCommandBehavior EventName="ItemTapped" 
+                                      Command="{Binding ItemSelectedCommand}"
+                                      EventArgsParameterPath="Item" />
+            </ListView.Behaviors>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

@@ -1,6 +1,12 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
+#if MOBILE
+#else
+using Microsoft.Azure.Mobile.Server;
+#endif
+
 
 namespace MIS.Models
 {
@@ -19,9 +25,8 @@ namespace MIS.Models
         public DateTimeOffset? UpdatedAt { get; set; }
     }
 #else
-    //public class BaseModel : EntityData
-    //{
-
-    //}
+    public class BaseModel : EntityData
+    {
+    }
 #endif
 }
