@@ -7,8 +7,8 @@ namespace MIS.Backend.Models
 {
     public class College
     {
-        public int id { get; set; }
-        public string college { get; set; }
-        public string logo { get; set; }
+        public int Id { get; set; }
+        public string CollegeName { get; set; }
+        public string Logo { get; set; }
     }
 }

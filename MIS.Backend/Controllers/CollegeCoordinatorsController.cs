@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != collegeCoordinator.id)
+            if (id != collegeCoordinator.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.CollegeCoordinators.Add(collegeCoordinator);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = collegeCoordinator.id }, collegeCoordinator);
+            return CreatedAtRoute("DefaultApi", new { id = collegeCoordinator.Id }, collegeCoordinator);
         }
 
         // DELETE: api/CollegeCoordinators/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool CollegeCoordinatorExists(int id)
         {
-            return db.CollegeCoordinators.Count(e => e.id == id) > 0;
+            return db.CollegeCoordinators.Count(e => e.Id == id) > 0;
         }
     }
 }

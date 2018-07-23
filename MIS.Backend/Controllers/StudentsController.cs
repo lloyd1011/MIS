@@ -12,44 +12,44 @@ using MIS.Backend.Models;
 
 namespace MIS.Backend.Controllers
 {
-    public class CollegesController : ApiController
+    public class StudentsController : ApiController
     {
         private MISDbContext db = new MISDbContext();
 
-        // GET: api/Colleges
-        public IQueryable<College> GetColleges()
+        // GET: api/Students
+        public IQueryable<Student> GetStudents()
         {
-            return db.Colleges;
+            return db.Students;
         }
 
-        // GET: api/Colleges/5
-        [ResponseType(typeof(College))]
-        public IHttpActionResult GetCollege(int id)
+        // GET: api/Students/5
+        [ResponseType(typeof(Student))]
+        public IHttpActionResult GetStudent(int id)
         {
-            College college = db.Colleges.Find(id);
-            if (college == null)
+            Student student = db.Students.Find(id);
+            if (student == null)
             {
                 return NotFound();
             }
 
-            return Ok(college);
+            return Ok(student);
         }
 
-        // PUT: api/Colleges/5
+        // PUT: api/Students/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutCollege(int id, College college)
+        public IHttpActionResult PutStudent(int id, Student student)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != college.Id)
+            if (id != student.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(college).State = EntityState.Modified;
+            db.Entry(student).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace MIS.Backend.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CollegeExists(id))
+                if (!StudentExists(id))
                 {
                     return NotFound();
                 }
@@ -70,35 +70,35 @@ namespace MIS.Backend.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Colleges
-        [ResponseType(typeof(College))]
-        public IHttpActionResult PostCollege(College college)
+        // POST: api/Students
+        [ResponseType(typeof(Student))]
+        public IHttpActionResult PostStudent(Student student)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Colleges.Add(college);
+            db.Students.Add(student);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = college.Id }, college);
+            return CreatedAtRoute("DefaultApi", new { id = student.Id }, student);
         }
 
-        // DELETE: api/Colleges/5
-        [ResponseType(typeof(College))]
-        public IHttpActionResult DeleteCollege(int id)
+        // DELETE: api/Students/5
+        [ResponseType(typeof(Student))]
+        public IHttpActionResult DeleteStudent(int id)
         {
-            College college = db.Colleges.Find(id);
-            if (college == null)
+            Student student = db.Students.Find(id);
+            if (student == null)
             {
                 return NotFound();
             }
 
-            db.Colleges.Remove(college);
+            db.Students.Remove(student);
             db.SaveChanges();
 
-            return Ok(college);
+            return Ok(student);
         }
 
         protected override void Dispose(bool disposing)
@@ -110,9 +110,9 @@ namespace MIS.Backend.Controllers
             base.Dispose(disposing);
         }
 
-        private bool CollegeExists(int id)
+        private bool StudentExists(int id)
         {
-            return db.Colleges.Count(e => e.Id == id) > 0;
+            return db.Students.Count(e => e.Id == id) > 0;
         }
     }
 }

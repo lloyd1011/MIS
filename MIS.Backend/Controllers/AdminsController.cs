@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != admin.id)
+            if (id != admin.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.Admins.Add(admin);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = admin.id }, admin);
+            return CreatedAtRoute("DefaultApi", new { id = admin.Id }, admin);
         }
 
         // DELETE: api/Admins/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool AdminExists(int id)
         {
-            return db.Admins.Count(e => e.id == id) > 0;
+            return db.Admins.Count(e => e.Id == id) > 0;
         }
     }
 }

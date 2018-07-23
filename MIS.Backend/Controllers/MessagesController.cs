@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != message.id)
+            if (id != message.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.Messages.Add(message);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = message.id }, message);
+            return CreatedAtRoute("DefaultApi", new { id = message.Id }, message);
         }
 
         // DELETE: api/Messages/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool MessageExists(int id)
         {
-            return db.Messages.Count(e => e.id == id) > 0;
+            return db.Messages.Count(e => e.Id == id) > 0;
         }
     }
 }

@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != officer.id)
+            if (id != officer.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.Officers.Add(officer);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = officer.id }, officer);
+            return CreatedAtRoute("DefaultApi", new { id = officer.Id }, officer);
         }
 
         // DELETE: api/Officers/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool OfficerExists(int id)
         {
-            return db.Officers.Count(e => e.id == id) > 0;
+            return db.Officers.Count(e => e.Id == id) > 0;
         }
     }
 }

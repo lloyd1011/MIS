@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != adviserNotification.id)
+            if (id != adviserNotification.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.AdviserNotifications.Add(adviserNotification);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = adviserNotification.id }, adviserNotification);
+            return CreatedAtRoute("DefaultApi", new { id = adviserNotification.Id }, adviserNotification);
         }
 
         // DELETE: api/AdviserNotifications/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool AdviserNotificationExists(int id)
         {
-            return db.AdviserNotifications.Count(e => e.id == id) > 0;
+            return db.AdviserNotifications.Count(e => e.Id == id) > 0;
         }
     }
 }

@@ -35,7 +35,7 @@ namespace MIS.Mobile.Droid
     {
         public string GetPath()
         {
-            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal)
+            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
                 return path;
         }
     }

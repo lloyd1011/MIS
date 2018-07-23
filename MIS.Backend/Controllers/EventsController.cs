@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != @event.id)
+            if (id != @event.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.Events.Add(@event);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = @event.id }, @event);
+            return CreatedAtRoute("DefaultApi", new { id = @event.Id }, @event);
         }
 
         // DELETE: api/Events/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool EventExists(int id)
         {
-            return db.Events.Count(e => e.id == id) > 0;
+            return db.Events.Count(e => e.Id == id) > 0;
         }
     }
 }

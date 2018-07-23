@@ -7,8 +7,8 @@ namespace MIS.Backend.Models
 {
     public class Year
     {
-        public int id { get; set; }
-        public string year { get; set; }
+        public int Id { get; set; }
+        public string YearDate { get; set; }
 
     }
 }

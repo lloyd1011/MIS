@@ -7,14 +7,14 @@ namespace MIS.Backend.Models
 {
     public class Message
     {
-        public int id { get; set; }
-        public int receiverId { get; set; }
-        public string content { get; set; }
-        public string dateSent { get; set; }
-        public string senderId { get; set; }
-        public string receiverName { get; set; }
-        public string senderName { get; set; }
-        public string senderStatus { get; set; }
+        public int Id { get; set; }
+        public int ReceiverId { get; set; }
+        public string Content { get; set; }
+        public string DateSent { get; set; }
+        public string SenderId { get; set; }
+        public string ReceiverName { get; set; }
+        public string SenderName { get; set; }
+        public string SenderStatus { get; set; }
 
     }
 }

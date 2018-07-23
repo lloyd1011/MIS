@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != dean.id)
+            if (id != dean.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.Deans.Add(dean);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = dean.id }, dean);
+            return CreatedAtRoute("DefaultApi", new { id = dean.Id }, dean);
         }
 
         // DELETE: api/Deans/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool DeanExists(int id)
         {
-            return db.Deans.Count(e => e.id == id) > 0;
+            return db.Deans.Count(e => e.Id == id) > 0;
         }
     }
 }

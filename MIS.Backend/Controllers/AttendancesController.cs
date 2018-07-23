@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != attendance.id)
+            if (id != attendance.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.Attendances.Add(attendance);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = attendance.id }, attendance);
+            return CreatedAtRoute("DefaultApi", new { id = attendance.Id }, attendance);
         }
 
         // DELETE: api/Attendances/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool AttendanceExists(int id)
         {
-            return db.Attendances.Count(e => e.id == id) > 0;
+            return db.Attendances.Count(e => e.Id == id) > 0;
         }
     }
 }

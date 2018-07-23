@@ -7,7 +7,7 @@ namespace MIS.Backend.Models
 {
     public class OrganizationType
     {
-        public int id { get; set; }
-        public string organizationType { get; set; }
+        public int Id { get; set; }
+        public string OrganizationTypeName { get; set; }
     }
 }

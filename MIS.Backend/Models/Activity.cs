@@ -7,14 +7,13 @@ namespace MIS.Backend.Models
 {
     public class Activity
     {
-        public int id { get; set; }
-        public string activityName { get; set; }
-        public string venue { get; set; }
-        public DateTime date { get; set; }
-        public string evaluationRating { get; set; }
+        public int Id { get; set; }
+        public string ActivityName { get; set; }
+        public string Venue { get; set; }
+        public DateTime Date { get; set; }
+        public string EvaluationRating { get; set; }
         public Organization Organization { get; set; }
-        public string description { get; set; }
-        
+        public string Description { get; set; }
 
     }
 }

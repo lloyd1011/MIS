@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != studentLiability.id)
+            if (id != studentLiability.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.StudentLiabilities.Add(studentLiability);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = studentLiability.id }, studentLiability);
+            return CreatedAtRoute("DefaultApi", new { id = studentLiability.Id }, studentLiability);
         }
 
         // DELETE: api/StudentLiabilities/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool StudentLiabilityExists(int id)
         {
-            return db.StudentLiabilities.Count(e => e.id == id) > 0;
+            return db.StudentLiabilities.Count(e => e.Id == id) > 0;
         }
     }
 }

@@ -7,11 +7,11 @@ namespace MIS.Backend.Models
 {
     public class AdviserNotification
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public AdviserOrganization AdviserOrganization { get; set; }
-        public string notification { get; set; }
-        public string notificationDate { get; set; }
-        public string link { get; set; }
+        public string Notification { get; set; }
+        public string NotificationDate { get; set; }
+        public string Link { get; set; }
         public Student Student { get; set; }
         public Liability Liability { get; set; }
 

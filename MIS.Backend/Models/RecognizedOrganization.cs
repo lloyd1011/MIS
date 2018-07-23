@@ -7,10 +7,10 @@ namespace MIS.Backend.Models
 {
     public class RecognizedOrganization
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public Organization Organization { get; set; }
         public Adviser Adviser { get; set; }
-        public string academciYear { get; set; }
+        public string AcademciYear { get; set; }
 
     }
 }

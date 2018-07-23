@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != semester.id)
+            if (id != semester.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.Semesters.Add(semester);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = semester.id }, semester);
+            return CreatedAtRoute("DefaultApi", new { id = semester.Id }, semester);
         }
 
         // DELETE: api/Semesters/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool SemesterExists(int id)
         {
-            return db.Semesters.Count(e => e.id == id) > 0;
+            return db.Semesters.Count(e => e.Id == id) > 0;
         }
     }
 }

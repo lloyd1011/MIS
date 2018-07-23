@@ -7,8 +7,8 @@ namespace MIS.Backend.Models
 {
     public class StudentPosition
     {
-        public int id { get; set; }
-        public string position { get; set; }
+        public int Id { get; set; }
+        public string Position { get; set; }
 
     }
 }

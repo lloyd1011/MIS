@@ -7,12 +7,12 @@ namespace MIS.Backend.Models
 {
     public class Organization
     {
-        public int id { get; set; }
-        public string organizationName { get; set; }
-        public string logo { get; set; }
+        public int Id { get; set; }
+        public string OrganizationName { get; set; }
+        public string Logo { get; set; }
         public College College { get; set; }
-        public string academicYear { get; set; }
-        public string level { get; set; }
+        public string AcademicYear { get; set; }
+        public string Level { get; set; }
         public OrganizationType OrganizationType { get; set; }
     }
 }

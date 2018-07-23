@@ -213,14 +213,15 @@
     <Compile Include="Controllers\SemestersController.cs" />
     <Compile Include="Controllers\StudentLiabilitiesController.cs" />
     <Compile Include="Controllers\StudentPositionsController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\YearsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807230755074_Management.cs" />
-    <Compile Include="Migrations\201807230755074_Management.Designer.cs">
-      <DependentUpon>201807230755074_Management.cs</DependentUpon>
+    <Compile Include="Migrations\201807231320260_Managements.cs" />
+    <Compile Include="Migrations\201807231320260_Managements.Designer.cs">
+      <DependentUpon>201807231320260_Managements.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Activity.cs" />
@@ -339,8 +340,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807230755074_Management.resx">
-      <DependentUpon>201807230755074_Management.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807231320260_Managements.resx">
+      <DependentUpon>201807231320260_Managements.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

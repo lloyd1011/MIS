@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != activity.id)
+            if (id != activity.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.Activities.Add(activity);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = activity.id }, activity);
+            return CreatedAtRoute("DefaultApi", new { id = activity.Id }, activity);
         }
 
         // DELETE: api/Activities/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool ActivityExists(int id)
         {
-            return db.Activities.Count(e => e.id == id) > 0;
+            return db.Activities.Count(e => e.Id == id) > 0;
         }
     }
 }

@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != organization.id)
+            if (id != organization.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.Organizations.Add(organization);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = organization.id }, organization);
+            return CreatedAtRoute("DefaultApi", new { id = organization.Id }, organization);
         }
 
         // DELETE: api/Organizations/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool OrganizationExists(int id)
         {
-            return db.Organizations.Count(e => e.id == id) > 0;
+            return db.Organizations.Count(e => e.Id == id) > 0;
         }
     }
 }

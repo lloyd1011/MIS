@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != schoolYear.id)
+            if (id != schoolYear.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.SchoolYears.Add(schoolYear);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = schoolYear.id }, schoolYear);
+            return CreatedAtRoute("DefaultApi", new { id = schoolYear.Id }, schoolYear);
         }
 
         // DELETE: api/SchoolYears/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool SchoolYearExists(int id)
         {
-            return db.SchoolYears.Count(e => e.id == id) > 0;
+            return db.SchoolYears.Count(e => e.Id == id) > 0;
         }
     }
 }

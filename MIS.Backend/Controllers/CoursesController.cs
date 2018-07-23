@@ -44,7 +44,7 @@ namespace MIS.Backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != course.id)
+            if (id != course.Id)
             {
                 return BadRequest();
             }
@@ -82,7 +82,7 @@ namespace MIS.Backend.Controllers
             db.Courses.Add(course);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = course.id }, course);
+            return CreatedAtRoute("DefaultApi", new { id = course.Id }, course);
         }
 
         // DELETE: api/Courses/5
@@ -112,7 +112,7 @@ namespace MIS.Backend.Controllers
 
         private bool CourseExists(int id)
         {
-            return db.Courses.Count(e => e.id == id) > 0;
+            return db.Courses.Count(e => e.Id == id) > 0;
         }
     }
 }

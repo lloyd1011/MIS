@@ -7,11 +7,11 @@ namespace MIS.Backend.Models
 {
     public class Event
     {
-        public int id { get; set; }
-        public string eventTitle { get; set; }
+        public int Id { get; set; }
+        public string EventTitle { get; set; }
         public AdviserOrganization AdviserOrganization { get; set; }
-        public string dateStart { get; set; }
-        public string dateEnd { get; set; }
+        public string DateStart { get; set; }
+        public string DateEnd { get; set; }
 
     }
 }
