@@ -1,4 +1,5 @@
-﻿using MvvmHelpers;
+﻿using MIS.Models;
+using MvvmHelpers;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;

@@ -19,4 +19,6 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <Import Project="..\..\MIS.Models\MIS.Models.projitems" Label="Shared" />
+
 </Project>

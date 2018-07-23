@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIS.Mobile", "MIS.Mobile\MIS.Mobile\MIS.Mobile.csproj", "{72004FC2-ACD1-4A56-9211-AA26CD920EDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MIS.Mobile", "MIS.Mobile\MIS.Mobile\MIS.Mobile.csproj", "{72004FC2-ACD1-4A56-9211-AA26CD920EDB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIS.Mobile.Android", "MIS.Mobile\MIS.Mobile.Android\MIS.Mobile.Android.csproj", "{2A5F539B-39C3-408A-8391-E115C3A6C164}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIS.Mobile.iOS", "MIS.Mobile\MIS.Mobile.iOS\MIS.Mobile.iOS.csproj", "{6693BF20-0809-414F-A93B-C86FE8AFF52E}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MIS.Models", "MIS.Models\MIS.Models.shproj", "{4BA42D6F-BB17-4A53-B440-DAF366BEBAF2}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MIS.Models\MIS.Models.projitems*{4ba42d6f-bb17-4a53-b440-daf366bebaf2}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
