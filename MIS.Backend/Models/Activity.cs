@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Microsoft.Azure.Mobile.Server;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace MIS.Backend.Models
 {
-    public class Activity
+    public class Activity : EntityData
     {
-        public int Id { get; set; }
         public string ActivityName { get; set; }
         public string Venue { get; set; }
         public DateTime Date { get; set; }

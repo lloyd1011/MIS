@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Microsoft.Azure.Mobile.Server;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace MIS.Backend.Models
 {
-    public class Semester
+    public class Semester : EntityData
     {
-        public int Id { get; set; }
         public string SemesterName { get; set; }
 
     }

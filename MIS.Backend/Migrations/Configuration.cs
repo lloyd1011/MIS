@@ -1,23 +1,22 @@
 namespace MIS.Backend.Migrations
 {
+    using Microsoft.Azure.Mobile.Server.Tables;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MIS.Backend.Models.MISDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<MIS.Backend.Models.MobileServiceContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
+            SetSqlGenerator("System.Data.SqlClient", new EntityTableSqlGenerator());
         }
-
-        protected override void Seed(MIS.Backend.Models.MISDbContext context)
+        protected override void Seed(MIS.Backend.Models.MobileServiceContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+            
         }
     }
 }

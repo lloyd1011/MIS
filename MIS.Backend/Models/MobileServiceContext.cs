@@ -1,13 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
-using System.Web;
-
+using Microsoft.Azure.Mobile.Server;
+using Microsoft.Azure.Mobile.Server.Tables;
 namespace MIS.Backend.Models
 {
-    public class MISDbContext : DbContext
+    public class MobileServiceContext : DbContext
     {
+
+        private const string connectionStringName = "Name=MS_TableConnectionString";
+
+        public MobileServiceContext() : base(connectionStringName)
+        {
+        }
+
         public DbSet<Activity> Activities { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Adviser> Advisers { get; set; }
@@ -35,5 +41,11 @@ namespace MIS.Backend.Models
         public DbSet<StudentPosition> StudentPositions { get; set; }
         public DbSet<Year> Years { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Add(
+                new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
+                    "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
+        }
     }
 }

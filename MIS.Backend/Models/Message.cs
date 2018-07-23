@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Microsoft.Azure.Mobile.Server;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace MIS.Backend.Models
 {
-    public class Message
+    public class Message : EntityData
     {
-        public int Id { get; set; }
         public int ReceiverId { get; set; }
         public string Content { get; set; }
         public string DateSent { get; set; }
