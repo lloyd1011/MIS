@@ -7,7 +7,7 @@ using System.Web;
 
 namespace MIS.Models
 {
-    public class Adviser : BaseDataObject
+    public class Adviser : BaseModel
     {
         public string FirstName { get; set; }
         public string MiddleName { get; set; }

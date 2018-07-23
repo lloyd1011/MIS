@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MIS.Models
 {
-    public class AdviserOrganization : BaseDataObject
+    public class AdviserOrganization : BaseModel
     {
         public Adviser Adviser { get; set; }
         public Organization Organization { get; set; }

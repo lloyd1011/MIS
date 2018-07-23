@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MIS.Models
 {
-    public class Event : BaseDataObject
+    public class Event : BaseModel
     {
         public string EventTitle { get; set; }
         public AdviserOrganization AdviserOrganization { get; set; }

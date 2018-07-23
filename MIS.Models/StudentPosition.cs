@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MIS.Models
 {
-    public class StudentPosition : BaseDataObject
+    public class StudentPosition : BaseModel
     {
         public string Position { get; set; }
 

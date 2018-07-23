@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MIS.Models
 {
-    public class Attendance : BaseDataObject
+    public class Attendance : BaseModel
     {
         public Activity Activity { get; set; }
         public Student Student { get; set; }

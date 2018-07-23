@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MIS.Models
 {
-    public class Message : BaseDataObject
+    public class Message : BaseModel
     {
         public int ReceiverId { get; set; }
         public string Content { get; set; }

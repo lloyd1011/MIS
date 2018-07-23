@@ -5,7 +5,7 @@ using System.Text;
 namespace MIS.Models
 {
 #if MOBILE
-    public class BaseDataObject
+    public class BaseModel
     {
         public string Id { get; set; }
 
@@ -19,7 +19,7 @@ namespace MIS.Models
         public DateTimeOffset? UpdatedAt { get; set; }
     }
 #else
-    //public class BaseDataObject : EntityData
+    //public class BaseModel : EntityData
     //{
 
     //}

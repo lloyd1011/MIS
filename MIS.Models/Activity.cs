@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MIS.Models
 {
-    public class Activity : BaseDataObject
+    public class Activity : BaseModel
     {
         public string ActivityName { get; set; }
         public string Venue { get; set; }

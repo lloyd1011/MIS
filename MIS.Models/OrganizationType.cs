@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MIS.Models
 {
-    public class OrganizationType : BaseDataObject
+    public class OrganizationType : BaseModel
     {
         public string OrganizationTypeName { get; set; }
     }

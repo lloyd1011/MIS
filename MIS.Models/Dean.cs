@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MIS.Models
 {
-    public class Dean : BaseDataObject
+    public class Dean : BaseModel
     {
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
