@@ -1,4 +1,5 @@
-﻿using MIS.Mobile.Models;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using MIS.Mobile.Models;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
@@ -11,16 +12,15 @@ namespace MIS.Mobile.ViewModels
 {
     public class ViewModelBase : BindableBase, INavigationAware, IDestructible
     {
-        private HttpClient client;
-
-        public HttpClient Client
+        private MobileServiceClient client;
+        private const string backend_url="";
+        public MobileServiceClient Client
         {
-            get {
+            get
+            {
                 if (client == null)
                 {
-                    client = new HttpClient();
-                    client.BaseAddress = new url("http://mobilepedia.azurewebsites.com");
-                    return client;
+                    client = new MobileServiceClient(backend_url);
                 }
                 return client;
             }
