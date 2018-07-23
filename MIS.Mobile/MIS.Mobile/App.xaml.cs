@@ -31,6 +31,7 @@ namespace MIS.Mobile
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<StudentPage>();
         }
     }
 }

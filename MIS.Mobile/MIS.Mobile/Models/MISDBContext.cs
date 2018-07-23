@@ -18,8 +18,9 @@ namespace MIS.Mobile.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var path = DependencyService.Get<IFileHelper>().GetPath();
-            optionsBuilder.UseSqlite("FileName" + path);
+            optionsBuilder.UseSqlite("FileName" + path + "/myDb.db");
             base.OnConfiguring(optionsBuilder);
         }
     }
 }
+ 

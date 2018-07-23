@@ -193,6 +193,38 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807230710199_MIS.cs" />
+    <Compile Include="Migrations\201807230710199_MIS.Designer.cs">
+      <DependentUpon>201807230710199_MIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Activity.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Adviser.cs" />
+    <Compile Include="Models\AdviserNotification.cs" />
+    <Compile Include="Models\AdviserOrganization.cs" />
+    <Compile Include="Models\Attendance.cs" />
+    <Compile Include="Models\College.cs" />
+    <Compile Include="Models\CollegeCoordinator.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Dean.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\Liability.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\MISDbContext.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\NotificationRead.cs" />
+    <Compile Include="Models\NotificationReadAdviser.cs" />
+    <Compile Include="Models\Officer.cs" />
+    <Compile Include="Models\Organization.cs" />
+    <Compile Include="Models\OrganizationType.cs" />
+    <Compile Include="Models\RecognizedOrganization.cs" />
+    <Compile Include="Models\SchoolYear.cs" />
+    <Compile Include="Models\Semester.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentLiability.cs" />
+    <Compile Include="Models\StudentPosition.cs" />
+    <Compile Include="Models\Year.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -251,7 +283,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -281,6 +312,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201807230710199_MIS.resx">
+      <DependentUpon>201807230710199_MIS.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
