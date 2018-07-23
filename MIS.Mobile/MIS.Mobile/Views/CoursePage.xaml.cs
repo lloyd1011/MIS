@@ -2,9 +2,9 @@
 
 namespace MIS.Mobile.Views
 {
-    public partial class StudentPage : ContentPage
+    public partial class CoursePage : ContentPage
     {
-        public StudentPage()
+        public CoursePage()
         {
             InitializeComponent();
         }
