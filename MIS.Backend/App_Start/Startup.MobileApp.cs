@@ -26,6 +26,7 @@ namespace MIS.Backend
             //BundleConfig.RegisterBundles(BundleTable.Bundles);
             mobileConfig
                 .AddTablesWithEntityFramework()
+                .AddMobileAppHomeController()
                 .ApplyTo(httpConfig);
 
             httpConfig.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
