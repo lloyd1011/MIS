@@ -4,5 +4,23 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="MIS.Mobile.Views.CoursePage">
-  
+    <StackLayout>
+        <ActivityIndicator IsVisible="{Binding IsBusy}" />
+        <ListView ItemsSource="{Binding Courses}"
+                  IsPullToRefreshEnabled="True"
+                  RefreshCommand="{Binding RefreshCommand}"
+                  HasUnevenRows="True"
+                  IsRefreshing="{Binding IsBusy}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Id}" FontSize="Medium"/>
+                            <Label Text="{Binding CourseName}" FontSize="Medium"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

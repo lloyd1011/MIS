@@ -10,10 +10,17 @@ namespace MIS.Mobile.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
+        public DelegateCommand NavigateCommand { get; set; }
         public MainPageViewModel(INavigationService navigationService) 
             : base (navigationService)
         {
             Title = "Main Page";
+            NavigateCommand = new DelegateCommand(ExecuteNavigateCommand);
+        }
+
+        async void ExecuteNavigateCommand()
+        {
+            await NavigationService.NavigateAsync("CoursePage");
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Microsoft.Azure.Mobile.Server;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MIS.Models
 {
-    public class Message : EntityData
+    public class Message : BaseDataObject
     {
         public int ReceiverId { get; set; }
         public string Content { get; set; }

@@ -1,4 +1,4 @@
-﻿using Microsoft.Azure.Mobile.Server;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MIS.Models
 {
-    public class AdviserNotification : EntityData
+    public class AdviserNotification : BaseDataObject
     {
         public AdviserOrganization AdviserOrganization { get; set; }
         public string Notification { get; set; }

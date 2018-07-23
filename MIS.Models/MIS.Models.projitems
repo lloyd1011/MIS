@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdviserNotification.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdviserOrganization.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Attendance.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BaseDataObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)College.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CollegeCoordinator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Course.cs" />

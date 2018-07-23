@@ -41,6 +41,15 @@ namespace MIS.Mobile.ViewModels
             }
         }
 
+        private bool isBusy;
+
+        public bool IsBusy
+        {
+            get { return isBusy; }
+            set { SetProperty(ref isBusy, value); }
+        }
+
+
         protected INavigationService NavigationService { get; private set; }
 
         private string _title;

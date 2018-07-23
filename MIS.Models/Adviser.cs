@@ -1,5 +1,5 @@
 ﻿
-using Microsoft.Azure.Mobile.Server;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Web;
 
 namespace MIS.Models
 {
-    public class Adviser : EntityData
+    public class Adviser : BaseDataObject
     {
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
