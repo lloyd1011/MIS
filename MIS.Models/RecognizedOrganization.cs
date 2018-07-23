@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MIS.Backend.Models
+namespace MIS.Models
 {
-    public class Attendance : EntityData
+    public class RecognizedOrganization : EntityData
     {
-        public Activity Activity { get; set; }
-        public Student Student { get; set; }
         public Organization Organization { get; set; }
+        public Adviser Adviser { get; set; }
+        public string AcademciYear { get; set; }
 
     }
 }

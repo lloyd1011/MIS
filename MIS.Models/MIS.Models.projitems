@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>4ba42d6f-bb17-4a53-b440-daf366bebaf2</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MIS.Models</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Activity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Admin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adviser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdviserNotification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdviserOrganization.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Attendance.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)College.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CollegeCoordinator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Course.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dean.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Event.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Liability.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Message.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Notification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NotificationRead.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NotificationReadAdviser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Officer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Organization.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OrganizationType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RecognizedOrganization.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SchoolYear.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Semester.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Student.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StudentLiability.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StudentPosition.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Year.cs" />
+  </ItemGroup>
+</Project>

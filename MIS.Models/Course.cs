@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MIS.Backend.Models
+namespace MIS.Models
 {
-    public class Semester : EntityData
+    public class Course : EntityData
     {
-        public string SemesterName { get; set; }
+        public string CourseName { get; set; }
 
     }
 }

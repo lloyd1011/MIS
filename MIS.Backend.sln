@@ -5,7 +5,13 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIS.Backend", "MIS.Backend\MIS.Backend.csproj", "{B2FCD861-507B-4F42-91C0-B2CB2B1450A9}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MIS.Models", "MIS.Models\MIS.Models.shproj", "{4BA42D6F-BB17-4A53-B440-DAF366BEBAF2}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MIS.Models\MIS.Models.projitems*{4ba42d6f-bb17-4a53-b440-daf366bebaf2}*SharedItemsImports = 13
+		MIS.Models\MIS.Models.projitems*{b2fcd861-507b-4f42-91c0-b2cb2b1450a9}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

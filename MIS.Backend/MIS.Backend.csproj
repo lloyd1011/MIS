@@ -166,33 +166,7 @@
       <DependentUpon>201807231336014_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Activity.cs" />
-    <Compile Include="Models\Admin.cs" />
-    <Compile Include="Models\Adviser.cs" />
-    <Compile Include="Models\AdviserNotification.cs" />
-    <Compile Include="Models\AdviserOrganization.cs" />
-    <Compile Include="Models\Attendance.cs" />
-    <Compile Include="Models\College.cs" />
-    <Compile Include="Models\CollegeCoordinator.cs" />
-    <Compile Include="Models\Course.cs" />
-    <Compile Include="Models\Dean.cs" />
-    <Compile Include="Models\Event.cs" />
-    <Compile Include="Models\Liability.cs" />
-    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
-    <Compile Include="Models\Notification.cs" />
-    <Compile Include="Models\NotificationRead.cs" />
-    <Compile Include="Models\NotificationReadAdviser.cs" />
-    <Compile Include="Models\Officer.cs" />
-    <Compile Include="Models\Organization.cs" />
-    <Compile Include="Models\OrganizationType.cs" />
-    <Compile Include="Models\RecognizedOrganization.cs" />
-    <Compile Include="Models\SchoolYear.cs" />
-    <Compile Include="Models\Semester.cs" />
-    <Compile Include="Models\Student.cs" />
-    <Compile Include="Models\StudentLiability.cs" />
-    <Compile Include="Models\StudentPosition.cs" />
-    <Compile Include="Models\Year.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -220,6 +194,7 @@
       <DependentUpon>201807231336014_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <Import Project="..\MIS.Models\MIS.Models.projitems" Label="Shared" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -238,7 +213,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51559/</IISUrl>
+          <IISUrl>http://localhost:60513/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MIS.Backend.Models
+namespace MIS.Models
 {
-    public class Year : EntityData
+    public class OrganizationType : EntityData
     {
-        public string YearDate { get; set; }
+        public string OrganizationTypeName { get; set; }
     }
 }
