@@ -22,19 +22,12 @@ namespace MIS.Backend.Controllers
         // GET tables/Course
         public IQueryable<Course> GetAllCourse()
         {
-            var context = new MobileServiceContext();
-            context.Courses.Add(new Course
-            {
-                Id = Guid.NewGuid().ToString(),
-                CourseName = "TETETETETE"
-            });
             return Query(); 
         }
 
         // GET tables/Course/48D68C86-6EA6-4C25-AA33-223FC9A27959
         public SingleResult<Course> GetCourse(string id)
         {
-           
             return Lookup(id);
         }
 
