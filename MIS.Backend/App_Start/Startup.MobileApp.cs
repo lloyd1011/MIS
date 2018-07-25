@@ -4,6 +4,8 @@ using System.Configuration;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Web.Http;
+using System.Web.Mvc;
+using System.Web.Optimization;
 using System.Web.Routing;
 using Microsoft.Azure.Mobile.Server;
 using Microsoft.Azure.Mobile.Server.Authentication;
@@ -20,13 +22,12 @@ namespace MIS.Backend
         {
             var httpConfig = new HttpConfiguration();
             var mobileConfig = new MobileAppConfiguration();
-            //AreaRegistration.RegisterAllAreas();
-            //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            //RouteConfig.RegisterRoutes(RouteTable.Routes);
-            //BundleConfig.RegisterBundles(BundleTable.Bundles);
+            AreaRegistration.RegisterAllAreas();
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             mobileConfig
                 .AddTablesWithEntityFramework()
-                .AddMobileAppHomeController()
                 .ApplyTo(httpConfig);
 
             httpConfig.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
