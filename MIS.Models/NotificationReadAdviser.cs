@@ -8,7 +8,7 @@ namespace MIS.Models
 {
     public class NotificationReadAdviser : BaseModel
     {
-        public Adviser Adviser { get; set; }
+        public User User { get; set; }
         public string Status { get; set; }
         public Notification Notification { get; set; }
 

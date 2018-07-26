@@ -8,7 +8,7 @@ namespace MIS.Models
 {
     public class NotificationRead : BaseModel
     {
-        public Student Student { get; set; }
+        public User User { get; set; }
         public string studentRead { get; set; }
         public Notification Notification { get; set; }
        
