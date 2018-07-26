@@ -30,12 +30,12 @@ namespace MIS.Mobile.ViewModels
         {
             var parameters = new NavigationParameters();
             parameters.Add("user", user);
-            await NavigationService.NavigateAsync("LoginPage", parameters);
+            await NavigationService.NavigateAsync("SignupPage", parameters);
         }
 
         async void ExecuteAddCommand()
         {
-            await NavigationService.NavigateAsync("LoginPage");
+            await NavigationService.NavigateAsync("SignupPage");
         }
 
         async void ExecuteRefreshCommand()

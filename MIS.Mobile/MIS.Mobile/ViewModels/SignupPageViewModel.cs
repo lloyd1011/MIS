@@ -1,4 +1,5 @@
 ﻿using MIS.Models;
+using MvvmHelpers;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
@@ -24,7 +25,7 @@ namespace MIS.Mobile.ViewModels
             get { return isEditing; }
             set { SetProperty(ref isEditing, value); }
         }
-
+        public ObservableRangeCollection<User> Users { get; set; } = new ObservableRangeCollection<User>();
         public DelegateCommand SaveCommand { get; set; }
         public DelegateCommand DeleteCommand { get; set; }
 

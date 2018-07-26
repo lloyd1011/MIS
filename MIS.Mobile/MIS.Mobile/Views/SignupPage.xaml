@@ -15,9 +15,10 @@
             <Entry Text="{Binding User.FirstName}" FontSize="Small" Placeholder="First Name" />
             <Entry Text="{Binding User.MiddleName}" FontSize="Small" Placeholder="Middle Name"/>
             <Entry Text="{Binding User.LastName}" FontSize="Small" Placeholder="Last Name"/>
-            <Entry Text="{Binding User.Course}" FontSize="Small" Placeholder=" Course"/>
-            <Entry Text="{Binding User.Year}" FontSize="Small" Placeholder=" Year"/>
-            <Entry Text="{Binding User.Password}" FontSize="Small" IsPassword="True" Placeholder=" Password"/>
+                <Picker Title="College" ItemsSource="{Binding College}" FontSize="Small"/>
+                <Picker Title="Course" ItemsSource="{Binding Course}" FontSize="Small"/>
+                <Picker Title="Year Level" ItemsSource="{Binding Year}" FontSize="Small" />
+                <Entry Text="{Binding User.Password}" FontSize="Small" IsPassword="True" Placeholder=" Password"/>
             <Entry Text="{Binding User.EmailAddress}" FontSize="Small" Placeholder="Email Address"/>
             <Entry Text="{Binding User.ContactNumber}" FontSize="Small" Placeholder=" Contact Number"/>
             <Button Text="Sign Up" Command="{Binding SaveCommand}" BackgroundColor="LightSkyBlue" />
