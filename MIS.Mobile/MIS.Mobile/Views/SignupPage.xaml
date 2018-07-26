@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MIS.Mobile.Views.SignupPage"
+             Title="{Binding Title}">
+    <ScrollView>
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image Source="header3.jpg"/>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="10" Padding="20">
+            <Label Text="{Binding Id}" FontSize="Medium"/>
+            <Entry Text="{Binding User.SrCode}" FontSize="Small" Placeholder=" SR-Code"/>
+            <Entry Text="{Binding User.FirstName}" FontSize="Small" Placeholder="First Name" />
+            <Entry Text="{Binding User.MiddleName}" FontSize="Small" Placeholder="Middle Name"/>
+            <Entry Text="{Binding User.LastName}" FontSize="Small" Placeholder="Last Name"/>
+            <Entry Text="{Binding User.Course}" FontSize="Small" Placeholder=" Course"/>
+            <Entry Text="{Binding User.Year}" FontSize="Small" Placeholder=" Year"/>
+            <Entry Text="{Binding User.Password}" FontSize="Small" IsPassword="True" Placeholder=" Password"/>
+            <Entry Text="{Binding User.EmailAddress}" FontSize="Small" Placeholder="Email Address"/>
+            <Entry Text="{Binding User.ContactNumber}" FontSize="Small" Placeholder=" Contact Number"/>
+            <Button Text="Sign Up" Command="{Binding SaveCommand}" BackgroundColor="LightSkyBlue" />
+        </StackLayout>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

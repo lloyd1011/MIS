@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MIS.Mobile.Helpers;
+using MIS.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,7 +14,7 @@ namespace MIS.Mobile.Models
         {
             Database.EnsureCreated();
         }
-        public DbSet<Student> Students { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

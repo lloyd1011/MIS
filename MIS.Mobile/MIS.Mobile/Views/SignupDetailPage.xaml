@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MIS.Mobile.Views.SignupDetailPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddCommand}" />
+    </ContentPage.ToolbarItems>
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image Source="header3.jpg"/>
+        <StackLayout>
+            <ActivityIndicator IsVisible="{Binding IsBusy}" />
+            <ListView ItemsSource="{Binding Users}"
+                  IsPullToRefreshEnabled="True"
+                  RefreshCommand="{Binding RefreshCommand}"
+                  HasUnevenRows="True"
+                  IsRefreshing="{Binding IsBusy}" >
+                <ListView.Behaviors>
+                    <b:EventToCommandBehavior EventName="ItemTapped" 
+                                      Command="{Binding ItemSelectedCommand}"
+                                      EventArgsParameterPath="Item" />
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="10" Padding="10">
+                                <Label Text="{Binding Id}" FontSize="Medium"/>
+                                <Entry Text="{Binding SrCode}" FontSize="Medium"/>
+                                <Entry Text="{Binding FirstName}" FontSize="Medium"/>
+                                <Entry Text="{Binding MiddleName}" FontSize="Medium"/>
+                                <Entry Text="{Binding LastName}" FontSize="Medium"/>
+                                <Entry Text="{Binding Course}" FontSize="Medium"/>
+                                <Entry Text="{Binding Year}" FontSize="Medium" />
+                                <Entry Text="{Binding Password}" FontSize="Medium" IsPassword="True"/>
+                                <Entry Text="{Binding EmailAddress}" FontSize="Medium"/>
+                                <Entry Text="{Binding ContactNumber}" FontSize="Medium"/>
+                                <Button Text="Sign Up" Command="{Binding AddCommand}" BackgroundColor="LightSkyBlue" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

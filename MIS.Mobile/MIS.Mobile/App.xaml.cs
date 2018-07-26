@@ -24,7 +24,7 @@ namespace MIS.Mobile
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync("NavigationPage/LoginPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -33,6 +33,9 @@ namespace MIS.Mobile
             containerRegistry.RegisterForNavigation<MainPage>();
             containerRegistry.RegisterForNavigation<CoursePage>();
             containerRegistry.RegisterForNavigation<CourseDetailPage>();
+            containerRegistry.RegisterForNavigation<LoginPage>();
+            containerRegistry.RegisterForNavigation<SignupPage>();
+            containerRegistry.RegisterForNavigation<SignupDetailPage>();
         }
     }
 }

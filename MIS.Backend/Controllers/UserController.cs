@@ -9,42 +9,42 @@ using MIS.Models;
 
 namespace MIS.Backend.Controllers
 {
-    public class OfficerController : TableController<Officer>
+    public class UserController : TableController<User>
     {
         protected override void Initialize(HttpControllerContext controllerContext)
         {
             base.Initialize(controllerContext);
             MobileServiceContext context = new MobileServiceContext();
-            DomainManager = new EntityDomainManager<Officer>(context, Request);
+            DomainManager = new EntityDomainManager<User>(context, Request);
         }
 
-        // GET tables/Officer
-        public IQueryable<Officer> GetAllOfficer()
+        // GET tables/User
+        public IQueryable<User> GetAllUser()
         {
             return Query(); 
         }
 
-        // GET tables/Officer/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public SingleResult<Officer> GetOfficer(string id)
+        // GET tables/User/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public SingleResult<User> GetUser(string id)
         {
             return Lookup(id);
         }
 
-        // PATCH tables/Officer/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task<Officer> PatchOfficer(string id, Delta<Officer> patch)
+        // PATCH tables/User/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public Task<User> PatchUser(string id, Delta<User> patch)
         {
              return UpdateAsync(id, patch);
         }
 
-        // POST tables/Officer
-        public async Task<IHttpActionResult> PostOfficer(Officer item)
+        // POST tables/User
+        public async Task<IHttpActionResult> PostUser(User item)
         {
-            Officer current = await InsertAsync(item);
+            User current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
 
-        // DELETE tables/Officer/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task DeleteOfficer(string id)
+        // DELETE tables/User/48D68C86-6EA6-4C25-AA33-223FC9A27959
+        public Task DeleteUser(string id)
         {
              return DeleteAsync(id);
         }

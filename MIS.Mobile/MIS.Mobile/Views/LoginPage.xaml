@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MIS.Mobile.Views.LoginPage" NavigationPage.HasNavigationBar="False"
+             Title="{Binding Title}">
+    
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image Source="header3.jpg"/>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="10" Padding="50">
+            <Label/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Entry Text ="{Binding SrCode}" Grid.Row="0" Grid.Column="1" Placeholder="SR-Code"/>
+                <Entry Text ="{Binding Password}" Grid.Row="1" Grid.Column="1" IsPassword="True" Placeholder="Password"/>
+            </Grid>
+            <Button Text="Sign In" BackgroundColor="LightSkyBlue" />
+            <Label/>
+            <Label Text="----------------------- OR -----------------------" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="Medium" TextColor="Gray"/>
+            <Label/>
+
+            <Label Text="Confirm Your Account" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="Large" TextColor="Black"/>
+            <Button Text="I'm a Student" Command="{Binding Nav}"  BackgroundColor="LightSkyBlue"/>
+    </StackLayout>
+    </StackLayout> 
+</ContentPage>
