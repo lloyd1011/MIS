@@ -12,7 +12,7 @@
         <Image Source="header3.jpg"/>
         <StackLayout>
             <ActivityIndicator IsVisible="{Binding IsBusy}" />
-            <ListView ItemsSource="{Binding Users}"
+            <ListView ItemsSource="{Binding Students}"
                   IsPullToRefreshEnabled="True"
                   RefreshCommand="{Binding RefreshCommand}"
                   HasUnevenRows="True"

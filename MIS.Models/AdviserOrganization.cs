@@ -8,7 +8,7 @@ namespace MIS.Models
 {
     public class AdviserOrganization : BaseModel
     {
-        public User User { get; set; }
+        public Adviser Adviser { get; set; }
         public Organization Organization { get; set; }
         public College College { get; set; }
         public string ThumbNails { get; set; }

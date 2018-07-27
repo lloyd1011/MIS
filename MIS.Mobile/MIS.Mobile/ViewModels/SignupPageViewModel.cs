@@ -11,12 +11,12 @@ namespace MIS.Mobile.ViewModels
 {
     public class SignupPageViewModel : ViewModelBase
     {
-        private User user;
+        private Student student;
 
-        public User User
+        public Student Student
         {
-            get { return user; }
-            set { SetProperty(ref user, value); }
+            get { return student; }
+            set { SetProperty(ref student, value); }
         }
 
         private bool isEditing;
@@ -25,47 +25,47 @@ namespace MIS.Mobile.ViewModels
             get { return isEditing; }
             set { SetProperty(ref isEditing, value); }
         }
-        public ObservableRangeCollection<User> Users { get; set; } = new ObservableRangeCollection<User>();
-        public DelegateCommand SaveCommand { get; set; }
-        public DelegateCommand DeleteCommand { get; set; }
+        public ObservableRangeCollection<Student> Students { get; set; } = new ObservableRangeCollection<Student>();
+        public DelegateCommand BtnSave { get; set; }
+        public DelegateCommand BtnDelete { get; set; }
 
         public SignupPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = "Sign Up";
-            SaveCommand = new DelegateCommand(ExecuteSaveCommand);
-            DeleteCommand = new DelegateCommand(ExecuteDeleteCommand);
+            BtnSave = new DelegateCommand(ExecuteBtnSave);
+            BtnDelete = new DelegateCommand(ExecuteBtnDelete);
         }
 
-        async void ExecuteSaveCommand()
+        async void ExecuteBtnSave()
         {
             if (IsEditing)
             {
-                await Client.GetTable<User>().UpdateAsync(user);
+                await Client.GetTable<Student>().UpdateAsync(student);
             }
             else
             {
-                User.Id = Guid.NewGuid().ToString();
-                await Client.GetTable<User>().InsertAsync(User);
+                Student.Id = Guid.NewGuid().ToString();
+                await Client.GetTable<Student>().InsertAsync(Student);
             }
             await NavigationService.NavigateAsync("LoginPage");
         }
 
-        async void ExecuteDeleteCommand()
+        async void ExecuteBtnDelete()
         {
-            await Client.GetTable<User>().DeleteAsync(User);
+            await Client.GetTable<Student>().DeleteAsync(Student);
             await NavigationService.GoBackAsync();
         }
 
         public override void OnNavigatingTo(NavigationParameters parameters)
         {
-            if (parameters.ContainsKey("user"))
+            if (parameters.ContainsKey("student"))
             {
                 IsEditing = true;
-                User = (User)parameters["user"];
+                Student = (Student)parameters["student"];
             }
             else
             {
-                User = new User();
+                Student = new Student();
             }
         }
     }

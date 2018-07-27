@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MIS.Models
 {
-    public class Officer
+    public class Officer : BaseModel
     {
         public string FirstName { get; set; }
         public string MiddleName { get; set; }

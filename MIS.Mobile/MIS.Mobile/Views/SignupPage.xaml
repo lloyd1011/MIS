@@ -11,17 +11,17 @@
         <Image Source="header3.jpg"/>
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="10" Padding="20">
             <Label Text="{Binding Id}" FontSize="Medium"/>
-            <Entry Text="{Binding User.SrCode}" FontSize="Small" Placeholder=" SR-Code"/>
-            <Entry Text="{Binding User.FirstName}" FontSize="Small" Placeholder="First Name" />
-            <Entry Text="{Binding User.MiddleName}" FontSize="Small" Placeholder="Middle Name"/>
-            <Entry Text="{Binding User.LastName}" FontSize="Small" Placeholder="Last Name"/>
+            <Entry Text="{Binding Student.Username}" FontSize="Small" Placeholder=" SR-Code"/>
+            <Entry Text="{Binding Student.FirstName}" FontSize="Small" Placeholder="First Name" />
+            <Entry Text="{Binding Student.MiddleName}" FontSize="Small" Placeholder="Middle Name"/>
+            <Entry Text="{Binding Student.LastName}" FontSize="Small" Placeholder="Last Name"/>
                 <Picker Title="College" ItemsSource="{Binding College}" FontSize="Small"/>
                 <Picker Title="Course" ItemsSource="{Binding Course}" FontSize="Small"/>
                 <Picker Title="Year Level" ItemsSource="{Binding Year}" FontSize="Small" />
-                <Entry Text="{Binding User.Password}" FontSize="Small" IsPassword="True" Placeholder=" Password"/>
-            <Entry Text="{Binding User.EmailAddress}" FontSize="Small" Placeholder="Email Address"/>
-            <Entry Text="{Binding User.ContactNumber}" FontSize="Small" Placeholder=" Contact Number"/>
-            <Button Text="Sign Up" Command="{Binding SaveCommand}" BackgroundColor="LightSkyBlue" />
+                <Entry Text="{Binding Student.Password}" FontSize="Small" IsPassword="True" Placeholder=" Password"/>
+            <Entry Text="{Binding Student.EmailAddress}" FontSize="Small" Placeholder="Email Address"/>
+            <Entry Text="{Binding Student.ContactNumber}" FontSize="Small" Placeholder=" Contact Number"/>
+            <Button Text="Sign Up" Command="{Binding BtnSave}" BackgroundColor="LightSkyBlue" />
         </StackLayout>
     </StackLayout>
     </ScrollView>

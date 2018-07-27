@@ -14,7 +14,7 @@ namespace MIS.Mobile.Models
         {
             Database.EnsureCreated();
         }
-        public DbSet<User> Users { get; set; }
+        public DbSet<Student> Students { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

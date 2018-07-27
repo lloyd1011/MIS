@@ -8,6 +8,6 @@ namespace MIS.Models
 {
     public class Year : BaseModel
     {
-        public string YearDate { get; set; }
+        public string YearLevel { get; set; }
     }
 }

@@ -13,23 +13,23 @@ namespace MIS.Mobile.ViewModels
 {
 	public class SignupDetailPageViewModel : ViewModelBase
 	{
-        public ObservableRangeCollection<User> Users { get; set; } = new ObservableRangeCollection<User>();
+        public ObservableRangeCollection<Student> Students { get; set; } = new ObservableRangeCollection<Student>();
         public DelegateCommand RefreshCommand { get; set; }
         public DelegateCommand AddCommand { get; set; }
-        public DelegateCommand<User> ItemSelectedCommand { get; set; }
+        public DelegateCommand<Student> ItemSelectedCommand { get; set; }
         public IPageDialogService _pageDialog { get; set; }
         public SignupDetailPageViewModel(INavigationService navigationService, IPageDialogService pageDialog) : base(navigationService)
         {
             RefreshCommand = new DelegateCommand(ExecuteRefreshCommand);
             AddCommand = new DelegateCommand(ExecuteAddCommand);
-            ItemSelectedCommand = new DelegateCommand<User>(ExecuteItemSelectedCommand);
+            ItemSelectedCommand = new DelegateCommand<Student>(ExecuteItemSelectedCommand);
             _pageDialog = pageDialog;
         }
 
-        async void ExecuteItemSelectedCommand(User user)
+        async void ExecuteItemSelectedCommand(Student student)
         {
             var parameters = new NavigationParameters();
-            parameters.Add("user", user);
+            parameters.Add("student", student);
             await NavigationService.NavigateAsync("SignupPage", parameters);
         }
 
@@ -49,8 +49,8 @@ namespace MIS.Mobile.ViewModels
             {
                 IsBusy = true;
                 //Eto na yung GetStringAsync natin sa HttpClient
-                var users = await Client.GetTable<User>().ReadAsync();
-                Users.ReplaceRange(users);
+                var students = await Client.GetTable<Student>().ReadAsync();
+                Students.ReplaceRange(students);
             }
             catch (Exception ex)
             {

@@ -35,7 +35,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Student.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StudentLiability.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StudentPosition.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UserCredential.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Year.cs" />
   </ItemGroup>

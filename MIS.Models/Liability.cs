@@ -10,7 +10,7 @@ namespace MIS.Models
     {
         public string LiabilityName { get; set; }
         public string Date { get; set; }
-        public User User { get; set; }
+        public Adviser Adviser { get; set; }
         public Organization Organization { get; set; }
         public Semester Semester { get; set; }
         public SchoolYear SchoolYear { get; set; }

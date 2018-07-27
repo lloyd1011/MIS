@@ -12,7 +12,7 @@ namespace MIS.Models
         public string Notification { get; set; }
         public string NotificationDate { get; set; }
         public string Link { get; set; }
-        public User User { get; set; }
+        public Student Student { get; set; }
         public Liability Liability { get; set; }
 
 

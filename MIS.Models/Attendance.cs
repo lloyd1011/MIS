@@ -9,7 +9,7 @@ namespace MIS.Models
     public class Attendance : BaseModel
     {
         public Activity Activity { get; set; }
-        public User User { get; set; }
+        public Student Student { get; set; }
         public Organization Organization { get; set; }
 
     }
