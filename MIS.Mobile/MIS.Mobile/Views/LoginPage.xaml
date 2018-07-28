@@ -18,7 +18,7 @@
                 <Entry Text ="{Binding SrCode}" Grid.Row="0" Grid.Column="1" Placeholder="SR-Code"/>
                 <Entry Text ="{Binding Password}" Grid.Row="1" Grid.Column="1" IsPassword="True" Placeholder="Password"/>
             </Grid>
-            <Button Text="Sign In" BackgroundColor="LightSkyBlue" />
+            <Button Text="Sign In" Command="{Binding Nav1}" BackgroundColor="LightSkyBlue"/>
             <Label/>
             <Label Text="----------------------- OR -----------------------" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="Medium" TextColor="Gray"/>
             <Label/>

@@ -18,7 +18,6 @@ namespace MIS.Backend.Migrations
         }
         protected override void Seed(Models.MobileServiceContext context)
         {
-
             var studentType = new UserCredential
             {
                 Id = Guid.NewGuid().ToString(),
@@ -26,15 +25,21 @@ namespace MIS.Backend.Migrations
                 Username = "15-02712",
                 Password = "101197",
             };
+           
             var adviserType = new UserCredential
             {
                 Id = Guid.NewGuid().ToString(),
                 UserType = "Adviser",
+                Username = "Noey",
+                Password = "1011971",
             };
+    
             var officerType = new UserCredential
             {
                 Id = Guid.NewGuid().ToString(),
                 UserType = "Officer",
+                Username = "JinKy",
+                Password = "1011971",
             };
             context.UserCredentials.AddOrUpdate(u => u.UserType, studentType);
             context.UserCredentials.AddOrUpdate(u => u.UserType, adviserType);
@@ -50,6 +55,7 @@ namespace MIS.Backend.Migrations
             var bsitType = new Course
             {
                 Id = Guid.NewGuid().ToString(),
+                CourseAcronym = "BSIT",
                 CourseTitle = "Bachelor in Science in Information Technology",
             };
             context.Courses.AddOrUpdate(b => b.CourseTitle, bsitType);
@@ -78,6 +84,7 @@ namespace MIS.Backend.Migrations
             context.Students.AddOrUpdate(u => u.FirstName, student);
             context.SaveChanges();
         }
-           
+
     }
 }
+

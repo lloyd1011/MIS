@@ -15,7 +15,7 @@
             <Entry Text="{Binding Student.FirstName}" FontSize="Small" Placeholder="First Name" />
             <Entry Text="{Binding Student.MiddleName}" FontSize="Small" Placeholder="Middle Name"/>
             <Entry Text="{Binding Student.LastName}" FontSize="Small" Placeholder="Last Name"/>
-                <Picker Title="College" ItemsSource="{Binding College}" FontSize="Small"/>
+                <Picker Title="College" ItemsSource="{Binding College}" ItemDisplayBinding="{Binding College.CourseName}" FontSize="Small"/>
                 <Picker Title="Course" ItemsSource="{Binding Course}" FontSize="Small"/>
                 <Picker Title="Year Level" ItemsSource="{Binding Year}" FontSize="Small" />
                 <Entry Text="{Binding Student.Password}" FontSize="Small" IsPassword="True" Placeholder=" Password"/>

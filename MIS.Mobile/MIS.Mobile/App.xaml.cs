@@ -36,6 +36,7 @@ namespace MIS.Mobile
             containerRegistry.RegisterForNavigation<LoginPage>();
             containerRegistry.RegisterForNavigation<SignupPage>();
             containerRegistry.RegisterForNavigation<SignupDetailPage>();
+            containerRegistry.RegisterForNavigation<PrismMasterDetailPage1>();
         }
     }
 }
