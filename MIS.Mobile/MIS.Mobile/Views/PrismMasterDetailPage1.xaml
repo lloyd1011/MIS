@@ -6,9 +6,27 @@
                   x:Class="MIS.Mobile.Views.PrismMasterDetailPage1" BackgroundColor="LightSkyBlue" NavigationPage.HasNavigationBar="False">
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
-            <StackLayout Padding="20" BackgroundColor="LightSkyBlue">
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="LightSkyBlue" Padding="20">
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start">
                 <!-- TODO: // Update the Layout and add some real menu items  -->
-                <Button Text="ViewA" Command="{Binding NavigateCommand}" CommandParameter="ViewA" />
+                <!--<Button Text="ViewA" Command="{Binding NavigateCommand}" CommandParameter="ViewA" /> -->
+
+                    <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+                        <Button Image="Home.png" Text="Home" Command="{Binding NavigateHome}" BackgroundColor="Transparent"/>
+                        <Button Image="Attendance.png" Text="Attendance" Command="{Binding NavigateAttendance}" BackgroundColor="Transparent"/>
+                        <Button Image="Event.png" Text="Events" Command="{Binding NavigateEvent}" BackgroundColor="Transparent"/>
+                        <Button Image="Evaluation.png" Text="Evaluation" Command="{Binding NavigateEvaluation}" BackgroundColor="Transparent"/>
+                        <Button Image="Money.png" Text="Liabilities" Command="{Binding NavigateLiabilities}" BackgroundColor="Transparent"/>
+                        <Button Image="Picture.png" Text="Profile" Command="{Binding NavigateProfile}" BackgroundColor="Transparent"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                    <Button Image="Logout.png" Text="Log Out" BackgroundColor="Transparent"/>
+                </StackLayout>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>

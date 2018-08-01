@@ -9,13 +9,13 @@ namespace MIS.Mobile.ViewModels
 {
     public class LoginPageViewModel : ViewModelBase
     {
-       public DelegateCommand Nav { get; set; }
-        public DelegateCommand Nav1 { get; set; }
+       public DelegateCommand NavMain { get; set; }
+        public DelegateCommand NavSignup { get; set; }
         public LoginPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             
-           Nav = new DelegateCommand(ExecuteNavigateCommand);
-            Nav1 = new DelegateCommand(ExecuteNavigate1Command);
+           NavSignup = new DelegateCommand(ExecuteNavigateCommand);
+            NavMain = new DelegateCommand(ExecuteNavigate1Command);
         }
        
         async void ExecuteNavigateCommand()

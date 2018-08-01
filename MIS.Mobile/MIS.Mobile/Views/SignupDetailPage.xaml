@@ -31,7 +31,7 @@
                                 <Entry Text="{Binding FirstName}" FontSize="Medium"/>
                                 <Entry Text="{Binding MiddleName}" FontSize="Medium"/>
                                 <Entry Text="{Binding LastName}" FontSize="Medium"/>
-                                <Picker ItemsSource="{Binding College}"/>
+                                <Picker ItemsSource="{Binding College}" FontSize="Medium"/>
                                 <Picker ItemsSource="{Binding Course}" FontSize="Medium"/>
                                 <Picker ItemsSource="{Binding Year}" FontSize="Medium" />
                                 <Entry Text="{Binding Password}" FontSize="Medium" IsPassword="True"/>

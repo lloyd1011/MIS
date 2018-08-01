@@ -18,13 +18,13 @@
                 <Entry Text ="{Binding SrCode}" Grid.Row="0" Grid.Column="1" Placeholder="SR-Code"/>
                 <Entry Text ="{Binding Password}" Grid.Row="1" Grid.Column="1" IsPassword="True" Placeholder="Password"/>
             </Grid>
-            <Button Text="Sign In" Command="{Binding Nav1}" BackgroundColor="LightSkyBlue"/>
+            <Button Text="Sign In" Command="{Binding NavMain}" BackgroundColor="LightSkyBlue"/>
             <Label/>
             <Label Text="----------------------- OR -----------------------" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="Medium" TextColor="Gray"/>
             <Label/>
 
             <Label Text="Confirm Your Account" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="Large" TextColor="Black"/>
-            <Button Text="I'm a Student" Command="{Binding Nav}"  BackgroundColor="LightSkyBlue"/>
+            <Button Text="I'm a Student" Command="{Binding NavSignup}"  BackgroundColor="LightSkyBlue"/>
     </StackLayout>
     </StackLayout> 
 </ContentPage>

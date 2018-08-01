@@ -44,6 +44,15 @@ namespace MIS.Mobile.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
+        private string _icon;
+
+        public string Icon
+        {
+            get { return _icon; }
+            set { SetProperty(ref _icon, value); }
+        }
+
+
         public ViewModelBase(INavigationService navigationService)
         {
             NavigationService = navigationService;
