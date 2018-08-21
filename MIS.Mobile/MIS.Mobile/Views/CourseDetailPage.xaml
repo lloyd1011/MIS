@@ -5,7 +5,8 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="MIS.Mobile.Views.CourseDetailPage">
     <StackLayout>
-        <Entry Text="{Binding Course.CourseName}"/>
+        <Entry Text="{Binding Course.CourseAcronym}"/>
+        <Entry Text="{Binding Course.CourseTitle}"/>
         <Button Text="Save" Command="{Binding SaveCommand}"/>
         <Button Text="Delete" Command="{Binding DeleteCommand}" IsVisible="{Binding IsEditing}"/>
     </StackLayout>

@@ -25,8 +25,8 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
-                            <Label Text="{Binding Id}" FontSize="Medium"/>
-                            <Label Text="{Binding CourseName}" FontSize="Medium"/>
+                            <Label Text="{Binding CourseAcronym}" FontSize="Medium"/>
+                            <Label Text="{Binding CourseTitle}" FontSize="Medium"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

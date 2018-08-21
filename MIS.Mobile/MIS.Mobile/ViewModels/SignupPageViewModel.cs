@@ -3,14 +3,47 @@ using MvvmHelpers;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
+using Prism.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace MIS.Mobile.ViewModels
 {
     public class SignupPageViewModel : ViewModelBase
     {
+        public ObservableRangeCollection<College> Colleges { get; set; } = new ObservableRangeCollection<College>();
+        public IPageDialogService _pageDialog { get; set; }
+        public DelegateCommand RefreshCommand { get; set; }
+        public SignupPageViewModel(INavigationService navigationService, IPageDialogService pageDialog) : base(navigationService)
+        {
+            RefreshCommand = new DelegateCommand(ExecuteRefreshCommand);
+            _pageDialog = pageDialog;
+        }
+        async void ExecuteRefreshCommand()
+        {
+            await LoadItemsAsync();
+        }
+        async Task LoadItemsAsync()
+        {
+            try
+            {
+                IsBusy = true;
+                //Eto na yung GetStringAsync natin sa HttpClient
+                var courses = await Client.GetTable<College>().ReadAsync();
+                Colleges.ReplaceRange(courses);
+            }
+            catch (Exception ex)
+            {
+                await _pageDialog.DisplayAlertAsync("Error", ex.Message, "Ok");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+        
         private Student student;
 
         public Student Student
