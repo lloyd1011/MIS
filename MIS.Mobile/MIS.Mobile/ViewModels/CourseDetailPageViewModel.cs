@@ -10,9 +10,9 @@ namespace MIS.Mobile.ViewModels
 {
 	public class CourseDetailPageViewModel : ViewModelBase
 	{
-        private Course course;
+        private Event course;
 
-        public Course Course
+        public Event Course
         {
             get { return course; }
             set { SetProperty(ref course, value); }
@@ -39,19 +39,19 @@ namespace MIS.Mobile.ViewModels
         {
             if (IsEditing)
             {
-                await Client.GetTable<Course>().UpdateAsync(course);
+                await Client.GetTable<Event>().UpdateAsync(course);
             }
             else
             {
                 Course.Id = Guid.NewGuid().ToString();
-                await Client.GetTable<Course>().InsertAsync(Course);
+                await Client.GetTable<Event>().InsertAsync(Course);
             }
             await NavigationService.GoBackAsync();
         }
 
         async void ExecuteDeleteCommand()
         {
-            await Client.GetTable<Course>().DeleteAsync(Course);
+            await Client.GetTable<Event>().DeleteAsync(Course);
             await NavigationService.GoBackAsync();
         }
 
@@ -60,11 +60,11 @@ namespace MIS.Mobile.ViewModels
             if (parameters.ContainsKey("course")) 
             {
                 IsEditing = true;
-                Course = (Course)parameters["course"];
+                Course = (Event)parameters["course"];
             }
             else
             {
-                Course = new Course();
+                Course = new Event();
             }
         }
     }

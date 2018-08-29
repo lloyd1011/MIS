@@ -42,6 +42,7 @@ namespace MIS.Mobile
             containerRegistry.RegisterForNavigation<EvaluationPage>();
             containerRegistry.RegisterForNavigation<LiabilitiesPage>();
             containerRegistry.RegisterForNavigation<AttendancePage>();
+            containerRegistry.RegisterForNavigation<AttendanceScannerPage>();
         }
     }
 }

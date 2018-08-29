@@ -13,21 +13,21 @@ namespace MIS.Mobile.ViewModels
 {
 	public class CoursePageViewModel : ViewModelBase
 	{
-        public ObservableRangeCollection<Course> Courses { get; set; } = new ObservableRangeCollection<Course>();
+        public ObservableRangeCollection<Event> Courses { get; set; } = new ObservableRangeCollection<Event>();
         public DelegateCommand RefreshCommand { get; set; }
         public DelegateCommand AddCommand { get; set; }
-        public DelegateCommand<Course> ItemSelectedCommand { get; set; }
+        public DelegateCommand<Event> ItemSelectedCommand { get; set; }
         public IPageDialogService _pageDialog { get; set; }
         public CoursePageViewModel(INavigationService navigationService, IPageDialogService pageDialog) : base(navigationService)
         {
             Title = "Courses";
             RefreshCommand = new DelegateCommand(ExecuteRefreshCommand);
             AddCommand = new DelegateCommand(ExecuteAddCommand);
-            ItemSelectedCommand = new DelegateCommand<Course>(ExecuteItemSelectedCommand);
+            ItemSelectedCommand = new DelegateCommand<Event>(ExecuteItemSelectedCommand);
             _pageDialog = pageDialog;
         }
 
-        async void ExecuteItemSelectedCommand(Course course)
+        async void ExecuteItemSelectedCommand(Event course)
         {
             var parameters = new NavigationParameters();
             parameters.Add("course", course);
@@ -50,7 +50,7 @@ namespace MIS.Mobile.ViewModels
             {
                 IsBusy = true;
                 //Eto na yung GetStringAsync natin sa HttpClient
-                var courses = await Client.GetTable<Course>().ReadAsync();
+                var courses = await Client.GetTable<Event>().ReadAsync();
                 Courses.ReplaceRange(courses);
             }
             catch (Exception ex)

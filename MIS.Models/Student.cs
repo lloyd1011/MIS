@@ -9,7 +9,7 @@ namespace MIS.Models
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
-        public Course Course { get; set; }
+        public Event Course { get; set; }
         public Year Year { get; set; }
         public string ContactNumber { get; set; }
         public string EmailAddress { get; set; }

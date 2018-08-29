@@ -237,7 +237,6 @@ namespace MIS.Backend.Migrations
                 LastName = "Dela Vega",
                 UserCredential = studentType,
                 College = cecsType,
-                Course = bsitType,
                 Year = fourthType,
                 ContactNumber = "09055252022",
                 EmailAddress = "delavegajohnlloyd11@gmail.com",

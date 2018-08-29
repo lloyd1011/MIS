@@ -6,8 +6,94 @@
              x:Class="MIS.Mobile.Views.EvaluationPage" 
              Icon="Evaluation.png"
              Title="{Binding Title}" >
-
     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Image Source="header3.jpg"/>
+        <ScrollView>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="10" Padding="10" HeightRequest="1300">
+                <Grid HeightRequest="1200" RowSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Directions: Please read carefully and check the corresponding circles for your answers" Grid.Row="0" Grid.ColumnSpan="11" TextColor="Black"/>
+                    <Label Text="Scales:   (5) Outstanding" Grid.Row="1" Grid.ColumnSpan="10" FontSize="Small" TextColor="Black"/>
+                    <Label Text="                (4) Very Satisfactory " Grid.Row="2" Grid.ColumnSpan="10" FontSize="Small" TextColor="Black"/>
+                    <Label Text="                (3) Satisfactory" Grid.Row="3" Grid.ColumnSpan="10" FontSize="Small" TextColor="Black"/>
+                    <Label Text="                (2) Unsatisfactory" Grid.Row="4" Grid.ColumnSpan="10" FontSize="Small" TextColor="Black"/>
+                    <Label Text="                (1) Poor" Grid.Row="5" Grid.ColumnSpan="10" FontSize="Small" TextColor="Black"/>
+                    <Label Text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" Grid.Row="6" Grid.ColumnSpan="11" FontAttributes="Bold"/>
+                    <Label Text="Question" Grid.Row="7" Grid.Column="0"  Grid.ColumnSpan="5" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="5" Grid.Row="7" Grid.Column="6" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="4" Grid.Row="7" Grid.Column="7" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="3" Grid.Row="7" Grid.Column="8" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="2" Grid.Row="7" Grid.Column="9" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="1" Grid.Row="7" Grid.Column="10" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="1. Registration 
+                       (system and procedure, organization and 
+                       orderliness, services of the committee)"
+                       Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                    <Label Text="2. Objectives of the activity were achieved"
+                       Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                    <Label Text="3.A. Level of interest of participants in Punctuality/attendace"
+                       Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                    <Label Text="3.B. Level of interest of participants in participation of the participants during session"
+                       Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                    <Label Text="4. Relevance of the activity to the university's vision, mission, and objectives"
+                       Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                    <Label Text="5. Time allotment for the activity"
+                       Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                    <Label Text="6. Methods and procedure of the activity (Orderliness and sequencing of the activity)"
+                       Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                    <Label Text="7. Venue (facilities, equipment, multimedia, etc.)"
+                       Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                    <Label Text="8. General rating of the activity conducted"
+                       Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                    <Label Text="9.A. Speaker/Facilitator (Speaker/Facilitator 1)"
+                       Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                    <Label Text="9.B. Speaker/Facilitator (Speaker/Facilitator 2)"
+                       Grid.Row="18" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                    <Label Text="9.C. Speaker/Facilitator (Others)"
+                       Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                    <Label Text="10.A. Organizer's Courtesy"
+                       Grid.Row="20" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                    <Label Text="10.B. Organizer's Promptness"
+                       Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Small" TextColor="Black"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+
     </StackLayout>
+
 </ContentPage>

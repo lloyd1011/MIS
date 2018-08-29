@@ -8,6 +8,7 @@
         <Image Source="header3.jpg"/>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
             <Button Text="Navigate" Command="{Binding NavigateCommand}"/>
+            
         </StackLayout>
     </StackLayout>
 </ContentPage>

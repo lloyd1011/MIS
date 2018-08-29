@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="MIS.Mobile.Views.EventPage"
              Icon="Event.png"
@@ -9,6 +10,36 @@
 
     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Image Source="header3.jpg"/>
+        
+        <StackLayout Padding="20">
+            <ActivityIndicator IsVisible="{Binding IsBusy}" />
+            <ListView ItemsSource="{Binding Events}"
+                  IsPullToRefreshEnabled="True"
+                  RefreshCommand="{Binding RefreshCommand}"
+                  HasUnevenRows="True"
+                  IsRefreshing="{Binding IsBusy}" >
+                <ListView.Behaviors>
+                    <b:EventToCommandBehavior EventName="ItemTapped" 
+                                      Command="{Binding ItemSelectedCommand}"
+                                      EventArgsParameterPath="Item" />
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+                                <Button Image="Event.png" Text="List of Events" BackgroundColor="Transparent"  FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+                                <Label Text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - " FontAttributes="Bold"/>
+                                <Label Text="{Binding EventTitle}" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+                                <Label Text="{Binding DateStart}" FontSize="Medium" TextColor="Black"/>
+                                <Label Text="{Binding DateEnd}" FontSize="Medium" TextColor="Black"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </StackLayout>
-  
+
+
+
 </ContentPage>

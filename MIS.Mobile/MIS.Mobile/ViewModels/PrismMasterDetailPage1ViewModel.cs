@@ -1,6 +1,9 @@
-﻿using Prism.Commands;
+﻿using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
+using Prism.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +18,7 @@ namespace MIS.Mobile.ViewModels
         public DelegateCommand NavigateEvaluation { get; set; }
         public DelegateCommand NavigateLiabilities { get; set; }
         public DelegateCommand NavigateAttendance { get; set; }
+       
 
         public PrismMasterDetailPage1ViewModel(INavigationService navigationService) : base(navigationService)
         {

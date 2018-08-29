@@ -9,6 +9,9 @@
 
     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Image Source="header3.jpg"/>
-        
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Button Text="Open Scanner" Command="{Binding OpenScannerCommand}" BackgroundColor="LightSkyBlue"/>
+        </StackLayout>
     </StackLayout>
+   
 </ContentPage>
