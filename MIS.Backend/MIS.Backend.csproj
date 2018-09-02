@@ -223,9 +223,9 @@
     <Compile Include="Controllers\StudentPositionController.cs" />
     <Compile Include="Controllers\UserCredentialController.cs" />
     <Compile Include="Controllers\YearController.cs" />
-    <Compile Include="Migrations\201807231336014_Initial.cs" />
-    <Compile Include="Migrations\201807231336014_Initial.Designer.cs">
-      <DependentUpon>201807231336014_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201809021306032_Management.cs" />
+    <Compile Include="Migrations\201809021306032_Management.Designer.cs">
+      <DependentUpon>201809021306032_Management.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
@@ -255,8 +255,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807231336014_Initial.resx">
-      <DependentUpon>201807231336014_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809021306032_Management.resx">
+      <DependentUpon>201809021306032_Management.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="..\MIS.Models\MIS.Models.projitems" Label="Shared" />

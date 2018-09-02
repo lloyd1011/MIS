@@ -1,8 +1,6 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Text;
 
 namespace MIS.Models
 {
@@ -10,6 +8,5 @@ namespace MIS.Models
     {
         public string CourseAcronym { get; set; }
         public string CourseTitle { get; set; }
-
     }
 }
