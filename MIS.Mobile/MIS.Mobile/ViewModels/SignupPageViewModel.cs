@@ -31,8 +31,8 @@ namespace MIS.Mobile.ViewModels
             {
                 IsBusy = true;
                 //Eto na yung GetStringAsync natin sa HttpClient
-                var courses = await Client.GetTable<College>().ReadAsync();
-                Colleges.ReplaceRange(courses);
+                var colleges = await Client.GetTable<College>().ReadAsync();
+                Colleges.ReplaceRange(colleges);
             }
             catch (Exception ex)
             {
