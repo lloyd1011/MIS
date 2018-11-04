@@ -13,10 +13,10 @@
 
                     <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
                         <Button Image="Home.png" Text="Home" Command="{Binding NavigateHome}" BackgroundColor="Transparent"/>
-                        <Button Image="Attendance.png" Text="Attendance" Command="{Binding NavigateAttendance}" BackgroundColor="Transparent"/>
-                        <Button Image="Event.png" Text="Events" Command="{Binding NavigateEvent}" BackgroundColor="Transparent"/>
+                        <Button Image="Event.png" Text="Calendar of Events" Command="{Binding NavigateEvent}" BackgroundColor="Transparent"/>
+                        <Button Image="Money.png" Text="Payments and Liabilities" Command="{Binding NavigateLiabilities}" BackgroundColor="Transparent"/>
                         <Button Image="Evaluation.png" Text="Evaluation" Command="{Binding NavigateEvaluation}" BackgroundColor="Transparent"/>
-                        <Button Image="Money.png" Text="Liabilities" Command="{Binding NavigateLiabilities}" BackgroundColor="Transparent"/>
+                        <Button Image="Attendance.png" Text="Event Registration" Command="{Binding NavigateAttendance}" BackgroundColor="Transparent"/>
                         <Button Image="Picture.png" Text="Profile" Command="{Binding NavigateProfile}" BackgroundColor="Transparent"/>
                     </StackLayout>
                 </StackLayout>

@@ -15,13 +15,15 @@ namespace MIS.Mobile.ViewModels
     public class MainPageViewModel : ViewModelBase
     {
         public DelegateCommand NavigateCommand { get; set; }
-      
+        public DelegateCommand NavigateOrganization { get; set; }
+
 
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             Title = "Main Page";
             NavigateCommand = new DelegateCommand(ExecuteNavigateCommand);
+            NavigateOrganization = new DelegateCommand(ExecuteNavigateOrganization);
            
         }
 
@@ -29,7 +31,10 @@ namespace MIS.Mobile.ViewModels
         {
             await NavigationService.NavigateAsync("CoursePage");
         }
-
+        async void ExecuteNavigateOrganization()
+        {
+            await NavigationService.NavigateAsync("PrismMasterDetailPage1/NavigationPage/EventPage");
+        }
         
     }
 }

@@ -24,7 +24,7 @@ namespace MIS.Mobile.ViewModels
         }
         async void ExecuteNavigate1Command()
         {
-            await NavigationService.NavigateAsync("PrismMasterDetailPage1/NavigationPage/MainPage");
+            await NavigationService.NavigateAsync("MyHomePage/NavigationPage/MainPage");
 
         }   
     }

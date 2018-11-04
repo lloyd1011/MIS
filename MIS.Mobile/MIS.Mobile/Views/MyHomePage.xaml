@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="MIS.Mobile.Views.MyHomePage" NavigationPage.HasNavigationBar="False">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="LightSkyBlue" Padding="20">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                    <!-- TODO: // Update the Layout and add some real menu items  -->
+                    <!--<Button Text="ViewA" Command="{Binding NavigateCommand}" CommandParameter="ViewA" /> -->
+
+                    <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+                        <Button Image="organization.png" Text="Organization" Command="{Binding NavigateOrganization}" BackgroundColor="Transparent"/>
+                        <Button Image="notification.png" Text="Notification" Command="{Binding NavigateNotification}" BackgroundColor="Transparent"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand">
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                    <Button Image="Logout.png" Text="Log Out" Command="{Binding NavigateLogout}" BackgroundColor="Transparent"/>
+                </StackLayout>
+                </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+</MasterDetailPage>
